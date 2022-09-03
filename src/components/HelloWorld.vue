@@ -1,16 +1,23 @@
 <script setup lang="ts">
-	import { ref } from 'vue'
+	import { computed } from 'vue'
+	import { useStore } from 'vuex'
+	import { RootState } from '@/store/types';
 
 	defineProps<{ msg: string }>()
 
-	const count = ref(0)
+	const store = useStore<RootState>()
+	const count = computed(() => store.state.counter.counter)
+	const increment = () => store.commit('counter/increment')
+	const decrement = () => store.commit('counter/decrement')
 </script>
 
 <template>
 	<h1>{{ msg }}</h1>
 
 	<div class="card">
-		<button type="button" @click="count++">count is {{ count }}</button>
+		<button type="button" @click="increment()">Increment</button>
+		{{ count }}
+		<button type="button" @click="decrement()">Decrement</button>
 		<p>
 			Edit
 			<code>components/HelloWorld.vue</code> to test HMR
