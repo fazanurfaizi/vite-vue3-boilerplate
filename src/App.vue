@@ -1,5 +1,8 @@
 <script setup lang="ts">
 	import HelloWorld from '@/components/HelloWorld.vue'
+import { useI18n } from 'vue-i18n';
+
+	const { t } = useI18n();
 </script>
 
 <template>
@@ -11,7 +14,7 @@
 			<img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
 		</a>
 	</div>
-	<HelloWorld msg="Vite + Vue" />
+	<HelloWorld :msg="t('welcome')" />
 </template>
 
 <style scoped>

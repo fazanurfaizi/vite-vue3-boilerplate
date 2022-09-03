@@ -23,6 +23,7 @@
 		"strictFunctionTypes": true,
 		"skipLibCheck": true,
 		"target": "ESNext",
+		"types": ["@intlify/vite-plugin-vue-i18n/client"],
 		"useDefineForClassFields": true,
 	},
 	"paths": {
