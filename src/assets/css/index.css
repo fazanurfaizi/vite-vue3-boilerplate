@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.theme-bg-dark {
+	--color-bg-marketing: #111827;
+	--color-bg-primary: #111827;
+	--color-bg-secondary: #1f2937;
+	--color-bg-tertiary: #D1D5DB;
+	--color-bg-focus: #4a5568;
+	--color-bg-inverse: #ffffff;
+	--color-bg-darker: #0F172A;
+	--color-bg-lighter: #1E293B;
+	--color-text-focus: #ffffff;
+	--color-text-marketing: #cbd5e0;
+	--color-text-primary: #cbd5e0;
+	--color-text-secondary: #e2e8f0;
+	--color-text-tertiary: #D1D5DB;
+	--color-text-gray: #e2e8f0;
+	--color-text-inverse: #111827;
+}
+
+.theme-bg-light {
+	--color-bg-marketing: #ffffff;
+	--color-bg-primary: #edf2f7;
+	--color-bg-secondary: #f7fafc;
+	--color-bg-tertiary: #4B5563;
+	--color-bg-focus: #ffffff;
+	--color-bg-inverse: #111827;
+	--color-bg-darker: #E2E8F0;
+	--color-bg-lighter: #F8FAFC;
+	--color-text-marketing: #111827;
+	--color-text-primary: #111827;
+	--color-text-focus: #1f2937;
+	--color-text-secondary: #1f2937;
+	--color-text-tertiary: #4B5563;
+	--color-text-inverse: #ffffff;
+
+	--color-bg-marketing: #ffffff;
+	--color-bg-tertiary: #4B5563;
+	--color-bg-focus: #ffffff;
+	--color-bg-inverse: #111827;
+	--color-bg-darker: #E2E8F0;
+	--color-bg-lighter: #F8FAFC;
+	--color-text-marketing: #111827;
+	--color-text-primary: #111827;
+	--color-text-focus: #1f2937;
+	--color-text-secondary: #1f2937;
+	--color-text-tertiary: #4B5563;
+	--color-text-inverse: #ffffff;
+}
