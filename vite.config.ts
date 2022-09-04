@@ -7,13 +7,16 @@ import vueI18n from '@intlify/vite-plugin-vue-i18n'
 // https://vitejs.dev/config/
 export default defineConfig({
 	resolve: {
-		alias: [{ find: "@", replacement: "/src" }],
+		alias: [{ find: '@', replacement: '/src' }],
 	},
 	plugins: [
 		vue(),
 		vueI18n({
-			include: resolve(dirname(fileURLToPath(import.meta.url)), './src/locales/lang/**'),
+			include: resolve(
+				dirname(fileURLToPath(import.meta.url)),
+				'./src/locales/lang/**'
+			),
 			runtimeOnly: false,
-		})
+		}),
 	],
 })

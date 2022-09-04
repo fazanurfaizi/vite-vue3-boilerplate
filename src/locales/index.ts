@@ -1,9 +1,13 @@
-import { createI18n } from "vue-i18n";
+import { createI18n } from 'vue-i18n'
 import messages from '@intlify/vite-plugin-vue-i18n/messages'
 
-export const i18n = createI18n({
-	locale: localStorage.locale || "en",
+export default createI18n({
+	locale: localStorage.locale || 'en',
 	messages,
-});
-
-export default i18n
+	globalInjection: true,
+	silentFallbackWarn: true,
+	fallbackWarn: false,
+	warnHtmlInMessage: false,
+	warnHtmlMessage: false,
+	missingWarn: false,
+})

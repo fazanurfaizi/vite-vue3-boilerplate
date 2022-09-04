@@ -1,8 +1,8 @@
-import { Module } from "vuex";
-import { CounterState, RootState } from "../types";
+import { Module } from 'vuex'
+import { CounterState, RootState } from '../types'
 
 const initialState: CounterState = {
-	counter: 0
+	counter: 0,
 }
 
 export const counter: Module<CounterState, RootState> = {
@@ -11,7 +11,7 @@ export const counter: Module<CounterState, RootState> = {
 	getters: {
 		getCounter(state: CounterState) {
 			return state.counter
-		}
+		},
 	},
 	mutations: {
 		increment(state: CounterState) {
@@ -19,6 +19,6 @@ export const counter: Module<CounterState, RootState> = {
 		},
 		decrement(state: CounterState) {
 			state.counter--
-		}
-	}
+		},
+	},
 }

@@ -9,10 +9,12 @@ const debug = import.meta.env.NODE_ENV !== 'production'
 
 export const store = createStore<RootState>({
 	modules: {
-		counter
+		counter,
 	},
 	strict: debug,
-	plugins: debug ? [createPersistedState(), createLogger()] : [createPersistedState()]
+	plugins: debug
+		? [createPersistedState(), createLogger()]
+		: [createPersistedState()],
 })
 
 export default store

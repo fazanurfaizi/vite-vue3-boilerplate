@@ -3,49 +3,105 @@
 @tailwind utilities;
 
 .theme-bg-dark {
-	--color-bg-marketing: #111827;
-	--color-bg-primary: #111827;
-	--color-bg-secondary: #1f2937;
-	--color-bg-tertiary: #D1D5DB;
-	--color-bg-focus: #4a5568;
-	--color-bg-inverse: #ffffff;
-	--color-bg-darker: #0F172A;
-	--color-bg-lighter: #1E293B;
-	--color-text-focus: #ffffff;
-	--color-text-marketing: #cbd5e0;
-	--color-text-primary: #cbd5e0;
-	--color-text-secondary: #e2e8f0;
-	--color-text-tertiary: #D1D5DB;
-	--color-text-gray: #e2e8f0;
-	--color-text-inverse: #111827;
+	--color-bg-primary: @apply bg-blue-600;
+	--color-bg-secondary: @apply bg-purple-600;
+	--color-bg-success: @apply bg-green-600;
+	--color-bg-danger: @apply bg-red-600;
+	--color-bg-warning: @apply bg-yellow-500;
+	--color-bg-info: @apply bg-blue-400;
+	--color-bg-light: @apply bg-gray-200;
+	--color-bg-dark: @apply bg-gray-800;
+	--color-bg-link: @apply bg-transparent;
+
+	--color-text-primary: @apply text-blue-600;
+	--color-text-secondary: @apply text-purple-600;
+	--color-text-success: @apply text-green-600;
+	--color-text-danger: @apply text-red-600;
+	--color-text-warning: @apply text-yellow-500;
+	--color-text-info: @apply text-blue-400;
+	--color-text-light: @apply text-gray-200;
+	--color-text-dark: @apply text-gray-800;
+	--color-text-link: @apply text-blue-600;
+
+	--color-hover-primary: @apply bg-blue-700;
+	--color-hover-secondary: @apply bg-purple-700;
+	--color-hover-success: @apply bg-green-700;
+	--color-hover-danger: @apply bg-red-700;
+	--color-hover-warning: @apply bg-yellow-600;
+	--color-hover-info: @apply bg-blue-500;
+	--color-hover-light: @apply bg-gray-300;
+	--color-hover-dark: @apply bg-gray-900;
+	--color-hover-link: @apply bg-gray-100;
+
+	--color-focus-primary: @apply bg-blue-700;
+	--color-focus-secondary: @apply bg-purple-700;
+	--color-focus-success: @apply bg-green-700;
+	--color-focus-danger: @apply bg-red-700;
+	--color-focus-warning: @apply bg-yellow-600;
+	--color-focus-info: @apply bg-blue-500;
+	--color-focus-light: @apply bg-gray-300;
+	--color-focus-dark: @apply bg-gray-900;
+	--color-focus-link: @apply bg-gray-100;
+
+	--color-active-primary: @apply bg-blue-800;
+	--color-active-secondary: @apply bg-purple-800;
+	--color-active-success: @apply bg-green-800;
+	--color-active-danger: @apply bg-red-800;
+	--color-active-warning: @apply bg-yellow-700;
+	--color-active-info: @apply bg-blue-600;
+	--color-active-light: @apply bg-gray-400;
+	--color-active-dark: @apply bg-gray-900;
+	--color-active-link: @apply bg-gray-200;
 }
 
 .theme-bg-light {
-	--color-bg-marketing: #ffffff;
-	--color-bg-primary: #edf2f7;
-	--color-bg-secondary: #f7fafc;
-	--color-bg-tertiary: #4B5563;
-	--color-bg-focus: #ffffff;
-	--color-bg-inverse: #111827;
-	--color-bg-darker: #E2E8F0;
-	--color-bg-lighter: #F8FAFC;
-	--color-text-marketing: #111827;
-	--color-text-primary: #111827;
-	--color-text-focus: #1f2937;
-	--color-text-secondary: #1f2937;
-	--color-text-tertiary: #4B5563;
-	--color-text-inverse: #ffffff;
+	--color-bg-primary: @apply bg-blue-600;
+	--color-bg-secondary: @apply bg-purple-600;
+	--color-bg-success: @apply bg-green-600;
+	--color-bg-danger: @apply bg-red-600;
+	--color-bg-warning: @apply bg-yellow-500;
+	--color-bg-info: @apply bg-blue-400;
+	--color-bg-light: @apply bg-gray-200;
+	--color-bg-dark: @apply bg-gray-800;
+	--color-bg-link: @apply bg-transparent;
 
-	--color-bg-marketing: #ffffff;
-	--color-bg-tertiary: #4B5563;
-	--color-bg-focus: #ffffff;
-	--color-bg-inverse: #111827;
-	--color-bg-darker: #E2E8F0;
-	--color-bg-lighter: #F8FAFC;
-	--color-text-marketing: #111827;
-	--color-text-primary: #111827;
-	--color-text-focus: #1f2937;
-	--color-text-secondary: #1f2937;
-	--color-text-tertiary: #4B5563;
-	--color-text-inverse: #ffffff;
+	--color-text-primary: @apply text-blue-600;
+	--color-text-secondary: @apply text-purple-600;
+	--color-text-success: @apply text-green-600;
+	--color-text-danger: @apply text-red-600;
+	--color-text-warning: @apply text-yellow-500;
+	--color-text-info: @apply text-blue-400;
+	--color-text-light: @apply text-gray-200;
+	--color-text-dark: @apply text-gray-800;
+	--color-text-link: @apply text-blue-600;
+
+	--color-hover-primary: @apply bg-blue-700;
+	--color-hover-secondary: @apply bg-purple-700;
+	--color-hover-success: @apply bg-green-700;
+	--color-hover-danger: @apply bg-red-700;
+	--color-hover-warning: @apply bg-yellow-600;
+	--color-hover-info: @apply bg-blue-500;
+	--color-hover-light: @apply bg-gray-300;
+	--color-hover-dark: @apply bg-gray-900;
+	--color-hover-link: @apply bg-gray-100;
+
+	--color-focus-primary: @apply bg-blue-700;
+	--color-focus-secondary: @apply bg-purple-700;
+	--color-focus-success: @apply bg-green-700;
+	--color-focus-danger: @apply bg-red-700;
+	--color-focus-warning: @apply bg-yellow-600;
+	--color-focus-info: @apply bg-blue-500;
+	--color-focus-light: @apply bg-gray-300;
+	--color-focus-dark: @apply bg-gray-900;
+	--color-focus-link: @apply bg-gray-100;
+
+	--color-active-primary: @apply bg-blue-800;
+	--color-active-secondary: @apply bg-purple-800;
+	--color-active-success: @apply bg-green-800;
+	--color-active-danger: @apply bg-red-800;
+	--color-active-warning: @apply bg-yellow-700;
+	--color-active-info: @apply bg-blue-600;
+	--color-active-light: @apply bg-gray-400;
+	--color-active-dark: @apply bg-gray-900;
+	--color-active-link: @apply bg-gray-200;
 }

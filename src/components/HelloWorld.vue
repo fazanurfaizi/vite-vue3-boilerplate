@@ -1,7 +1,9 @@
 <script setup lang="ts">
 	import { computed } from 'vue'
 	import { useStore } from 'vuex'
-	import { RootState } from '@/store/types';
+	import { RootState } from '@/store/types'
+
+	import { TButton } from '@/components/atoms/button'
 
 	defineProps<{ msg: string }>()
 
@@ -15,9 +17,16 @@
 	<h1>{{ msg }}</h1>
 
 	<div class="card">
-		<button type="button" @click="increment()">Increment</button>
+		<!-- <button type="button" @click="increment()">Increment</button> -->
+		<TButton @click="increment()" type="button" size="md" color="primary">
+			Increment
+		</TButton>
 		{{ count }}
-		<button type="button" @click="decrement()">Decrement</button>
+		<TButton @click="decrement()" type="button" size="md" color="success" rounded outline>
+			Decrement
+		</TButton>
+		<TButton type="reset" size="md" color="info">Reset</TButton>
+		<TButton type="reset" size="md" color="dark" disabled>Disabled</TButton>
 		<p>
 			Edit
 			<code>components/HelloWorld.vue</code> to test HMR
