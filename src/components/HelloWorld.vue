@@ -1,9 +1,10 @@
 <script setup lang="ts">
-	import { computed } from 'vue'
+	import { computed, ref } from 'vue'
 	import { useStore } from 'vuex'
 	import { RootState } from '@/store/types'
 
 	import { TButton } from '@/components/atoms/button'
+	import { TAlert } from '@/components/atoms/alert/TAlert'
 
 	defineProps<{ msg: string }>()
 
@@ -11,6 +12,12 @@
 	const count = computed(() => store.state.counter.counter)
 	const increment = () => store.commit('counter/increment')
 	const decrement = () => store.commit('counter/decrement')
+
+	const visible = ref<boolean>(false)
+
+	const handleAlert = () => {
+		visible.value = !visible.value
+	}
 </script>
 
 <template>
@@ -26,7 +33,13 @@
 			Decrement
 		</TButton>
 		<TButton type="reset" size="md" color="info">Reset</TButton>
-		<TButton type="reset" size="md" color="dark" disabled>Disabled</TButton>
+
+		<TButton type="button" size="md" color="dark" @click="handleAlert()" disabled>Disabled</TButton>
+
+		<TButton component="a" size="md" color="link" href="https://v1.tailwindcss.com/components/alerts">Link</TButton>
+		<TAlert color="primary" dismissible :visible="visible">
+			<strong class="mr-1">Holy guacamole! </strong> You should check in on some of those fields below.
+		</TAlert>
 		<p>
 			Edit
 			<code>components/HelloWorld.vue</code> to test HMR
