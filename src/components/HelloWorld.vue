@@ -4,7 +4,7 @@
 	import { RootState } from '@/store/types'
 
 	import { TButton } from '@/components/atoms/button'
-	import { TAlert } from '@/components/atoms/alert/TAlert'
+	import { TAlert } from '@/components/atoms/alert'
 
 	defineProps<{ msg: string }>()
 
@@ -32,12 +32,30 @@
 		<TButton @click="decrement()" type="button" size="md" color="success" rounded outline>
 			Decrement
 		</TButton>
-		<TButton type="reset" size="md" color="info">Reset</TButton>
 
-		<TButton type="button" size="md" color="dark" @click="handleAlert()" disabled>Disabled</TButton>
+		<TButton type="button" size="md" color="primary" @click="handleAlert()">Alert</TButton>
 
-		<TButton component="a" size="md" color="link" href="https://v1.tailwindcss.com/components/alerts">Link</TButton>
 		<TAlert color="primary" dismissible :visible="visible">
+			<strong class="mr-1">Holy guacamole! </strong> You should check in on some of those fields below.
+		</TAlert>
+
+		<TAlert color="secondary" dismissible :visible="visible">
+			<strong class="mr-1">Holy guacamole! </strong> You should check in on some of those fields below.
+		</TAlert>
+
+		<TAlert color="success" dismissible :visible="visible">
+			<strong class="mr-1">Holy guacamole! </strong> You should check in on some of those fields below.
+		</TAlert>
+
+		<TAlert color="warning" dismissible :visible="visible">
+			<strong class="mr-1">Holy guacamole! </strong> You should check in on some of those fields below.
+		</TAlert>
+
+		<TAlert color="danger" dismissible :visible="visible">
+			<strong class="mr-1">Holy guacamole! </strong> You should check in on some of those fields below.
+		</TAlert>
+
+		<TAlert color="info" dismissible :visible="visible">
 			<strong class="mr-1">Holy guacamole! </strong> You should check in on some of those fields below.
 		</TAlert>
 		<p>

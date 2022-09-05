@@ -1,5 +1,16 @@
+export const Position = {
+	type: String,
+	default: 'top',
+	required: false,
+	validator: (value: string): boolean => {
+		return ['top', 'bottom'].includes(value)
+	}
+}
+
 export const Align = {
 	type: String,
+	default: '',
+	required: false,
 	validator: (value: string): boolean => {
 		// The value must match one of these strings
 		return ['', 'left', 'center', 'right'].includes(value)
