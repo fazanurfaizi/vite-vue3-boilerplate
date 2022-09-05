@@ -18,12 +18,25 @@
 	// const handleAlert = () => {
 	// 	visible.value = !visible.value
 	// }
-	import { TAvatar } from '@/components/atoms/avatar'
+	import { TBadge } from '@/components/atoms/badge';
 </script>
 
 <template>
 	<div class="card">
-		<TAvatar size="sm" src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" shadow variant="square" />
+		<TBadge label="Ardhin" color="primary" />
+		<TBadge label="Ardhin" color="primary" pills />
+		<TBadge label="Ardhin" color="secondary" />
+		<TBadge label="Ardhin" color="secondary" pills />
+		<TBadge label="Ardhin" color="success" />
+		<TBadge label="Ardhin" color="success" pills />
+		<TBadge label="Ardhin" color="warning" />
+		<TBadge label="Ardhin" color="warning" pills />
+		<TBadge label="Ardhin" color="danger" />
+		<TBadge label="Ardhin" color="danger" pills />
+		<TBadge label="Ardhin" color="dark" />
+		<TBadge label="Ardhin" color="dark" pills />
+		<TBadge label="Ardhin" color="light" />
+		<TBadge label="Ardhin" color="light" pills />
 	</div>
 </template>
 

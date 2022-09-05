@@ -54,7 +54,7 @@ export const Size = {
 	required: false,
 	validator: (value: string): boolean => {
 		// The value must match one of these strings
-		return ['sm', 'md', 'lg'].includes(value)
+		return ['xs', 'sm', 'md', 'lg', 'xl', 'xxl'].includes(value)
 	},
 }
 
