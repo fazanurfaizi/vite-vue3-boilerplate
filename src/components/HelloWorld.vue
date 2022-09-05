@@ -19,24 +19,23 @@
 	// 	visible.value = !visible.value
 	// }
 	import { TBadge } from '@/components/atoms/badge';
+	import TCheckbox from './atoms/checkbox/TCheckbox.vue';
+
+	const handleChange = (e: Event) => {
+		console.log(e)
+	}
 </script>
 
 <template>
 	<div class="card">
-		<TBadge label="Ardhin" color="primary" />
-		<TBadge label="Ardhin" color="primary" pills />
-		<TBadge label="Ardhin" color="secondary" />
-		<TBadge label="Ardhin" color="secondary" pills />
-		<TBadge label="Ardhin" color="success" />
-		<TBadge label="Ardhin" color="success" pills />
-		<TBadge label="Ardhin" color="warning" />
-		<TBadge label="Ardhin" color="warning" pills />
-		<TBadge label="Ardhin" color="danger" />
-		<TBadge label="Ardhin" color="danger" pills />
-		<TBadge label="Ardhin" color="dark" />
-		<TBadge label="Ardhin" color="dark" pills />
-		<TBadge label="Ardhin" color="light" />
-		<TBadge label="Ardhin" color="light" pills />
+		<TCheckbox color="primary" title="Ardhin" @change="handleChange" />
+		<TCheckbox color="secondary" title="Ardhin" />
+		<TCheckbox color="success" title="Ardhin" />
+		<TCheckbox color="danger" title="Ardhin" />
+		<TCheckbox color="warning" title="Ardhin" />
+		<TCheckbox color="dark" title="Ardhin" />
+		<TCheckbox color="light" title="Ardhin" readonly />
+		<TCheckbox color="link" title="Ardhin" disabled />
 	</div>
 </template>
 
